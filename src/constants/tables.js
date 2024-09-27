@@ -1,0 +1,122 @@
+export const multiplicationTables = {
+  1: [
+    { question: '1 x 1', correct: 1, wrong: [0, 2, 3, 4, 5, 6, 7, 8, 9] },
+    { question: '1 x 2', correct: 2, wrong: [1, 3, 4, 5, 6, 7, 8, 9, 10] },
+    { question: '1 x 3', correct: 3, wrong: [1, 2, 4, 5, 6, 7, 8, 9, 12] },
+    { question: '1 x 4', correct: 4, wrong: [2, 3, 5, 6, 7, 8, 9, 10, 12] },
+    { question: '1 x 5', correct: 5, wrong: [3, 4, 6, 7, 8, 9, 10, 12, 15] },
+    { question: '1 x 6', correct: 6, wrong: [4, 5, 7, 8, 9, 10, 11, 12, 14] },
+    { question: '1 x 7', correct: 7, wrong: [5, 6, 8, 9, 10, 11, 12, 13, 14] },
+    { question: '1 x 8', correct: 8, wrong: [6, 7, 9, 10, 11, 12, 13, 14, 16] },
+    { question: '1 x 9', correct: 9, wrong: [7, 8, 10, 11, 12, 13, 14, 15, 18] },
+    { question: '1 x 10', correct: 10, wrong: [8, 9, 11, 12, 13, 14, 15, 16, 20] }
+  ],
+  2: [
+    { question: '2 x 1', correct: 2, wrong: [1, 3, 4, 5, 6, 7, 8, 9, 10] },
+    { question: '2 x 2', correct: 4, wrong: [2, 6, 8, 10, 12, 14, 16, 18, 20] },
+    { question: '2 x 3', correct: 6, wrong: [4, 5, 7, 8, 9, 10, 12, 14, 18] },
+    { question: '2 x 4', correct: 8, wrong: [6, 7, 9, 10, 12, 14, 16, 18, 20] },
+    { question: '2 x 5', correct: 10, wrong: [8, 9, 12, 14, 15, 16, 18, 20, 25] },
+    { question: '2 x 6', correct: 12, wrong: [10, 11, 14, 16, 18, 20, 22, 24, 26] },
+    { question: '2 x 7', correct: 14, wrong: [12, 13, 16, 18, 20, 21, 22, 24, 28] },
+    { question: '2 x 8', correct: 16, wrong: [14, 15, 18, 20, 21, 22, 24, 26, 32] },
+    { question: '2 x 9', correct: 18, wrong: [16, 17, 20, 22, 24, 26, 27, 28, 36] },
+    { question: '2 x 10', correct: 20, wrong: [18, 19, 22, 24, 26, 28, 30, 40, 50] }
+  ],
+  3: [
+    { question: '3 x 1', correct: 3, wrong: [1, 2, 4, 5, 6, 7, 8, 9, 12] },
+    { question: '3 x 2', correct: 6, wrong: [2, 4, 5, 8, 9, 10, 12, 14, 18] },
+    { question: '3 x 3', correct: 9, wrong: [6, 7, 8, 10, 12, 13, 14, 18, 27] },
+    { question: '3 x 4', correct: 12, wrong: [8, 9, 10, 14, 16, 18, 20, 24, 28] },
+    { question: '3 x 5', correct: 15, wrong: [12, 14, 16, 18, 20, 21, 25, 30, 35] },
+    { question: '3 x 6', correct: 18, wrong: [15, 16, 20, 21, 22, 24, 26, 28, 36] },
+    { question: '3 x 7', correct: 21, wrong: [18, 20, 22, 24, 25, 26, 27, 28, 42] },
+    { question: '3 x 8', correct: 24, wrong: [21, 22, 25, 26, 27, 28, 30, 32, 48] },
+    { question: '3 x 9', correct: 27, wrong: [24, 25, 28, 29, 30, 32, 35, 36, 54] },
+    { question: '3 x 10', correct: 30, wrong: [27, 28, 32, 34, 36, 38, 40, 60, 90] }
+  ],
+  4: [
+    { question: '4 x 1', correct: 4, wrong: [3, 5, 6, 7, 8, 9, 10, 12, 16] },
+    { question: '4 x 2', correct: 8, wrong: [6, 7, 9, 10, 12, 14, 16, 18, 20] },
+    { question: '4 x 3', correct: 12, wrong: [9, 10, 14, 16, 18, 20, 22, 24, 36] },
+    { question: '4 x 4', correct: 16, wrong: [12, 14, 18, 20, 22, 24, 26, 28, 32] },
+    { question: '4 x 5', correct: 20, wrong: [16, 18, 22, 24, 25, 26, 28, 30, 40] },
+    { question: '4 x 6', correct: 24, wrong: [20, 22, 26, 28, 30, 32, 34, 36, 48] },
+    { question: '4 x 7', correct: 28, wrong: [24, 26, 30, 32, 34, 35, 36, 38, 56] },
+    { question: '4 x 8', correct: 32, wrong: [28, 30, 34, 36, 38, 40, 42, 48, 64] },
+    { question: '4 x 9', correct: 36, wrong: [32, 34, 38, 40, 42, 44, 45, 48, 72] },
+    { question: '4 x 10', correct: 40, wrong: [36, 38, 42, 44, 46, 48, 50, 60, 80] }
+  ],
+  5: [
+    { question: '5 x 1', correct: 5, wrong: [3, 4, 6, 7, 8, 9, 10, 15, 25] },
+    { question: '5 x 2', correct: 10, wrong: [8, 9, 12, 14, 16, 18, 20, 25, 50] },
+    { question: '5 x 3', correct: 15, wrong: [10, 12, 14, 18, 20, 21, 25, 30, 45] },
+    { question: '5 x 4', correct: 20, wrong: [15, 16, 18, 22, 24, 25, 28, 30, 40] },
+    { question: '5 x 5', correct: 25, wrong: [20, 22, 24, 26, 28, 30, 35, 40, 50] },
+    { question: '5 x 6', correct: 30, wrong: [24, 25, 28, 32, 35, 36, 38, 40, 60] },
+    { question: '5 x 7', correct: 35, wrong: [28, 30, 36, 38, 40, 42, 45, 49, 70] },
+    { question: '5 x 8', correct: 40, wrong: [32, 35, 36, 38, 42, 44, 45, 50, 80] },
+    { question: '5 x 9', correct: 45, wrong: [36, 38, 40, 42, 48, 49, 50, 54, 90] },
+    { question: '5 x 10', correct: 50, wrong: [40, 42, 45, 48, 54, 55, 60, 70, 100] }
+  ],
+  6: [
+    { question: '6 x 1', correct: 6, wrong: [3, 4, 5, 7, 8, 9, 10, 12, 18] },
+    { question: '6 x 2', correct: 12, wrong: [10, 11, 14, 16, 18, 20, 22, 24, 30] },
+    { question: '6 x 3', correct: 18, wrong: [12, 14, 16, 20, 22, 24, 26, 28, 36] },
+    { question: '6 x 4', correct: 24, wrong: [18, 20, 22, 26, 28, 30, 32, 34, 48] },
+    { question: '6 x 5', correct: 30, wrong: [24, 25, 28, 32, 35, 36, 38, 40, 60] },
+    { question: '6 x 6', correct: 36, wrong: [30, 32, 34, 38, 40, 42, 44, 46, 72] },
+    { question: '6 x 7', correct: 42, wrong: [36, 38, 44, 46, 48, 49, 50, 54, 84] },
+    { question: '6 x 8', correct: 48, wrong: [40, 42, 46, 50, 54, 56, 58, 60, 96] },
+    { question: '6 x 9', correct: 54, wrong: [48, 50, 52, 56, 58, 60, 62, 63, 108] },
+    { question: '6 x 10', correct: 60, wrong: [50, 54, 56, 58, 62, 64, 66, 70, 120] }
+  ],
+  7: [
+    { question: '7 x 1', correct: 7, wrong: [3, 4, 5, 6, 8, 9, 10, 14, 21] },
+    { question: '7 x 2', correct: 14, wrong: [10, 11, 12, 16, 18, 20, 22, 24, 28] },
+    { question: '7 x 3', correct: 21, wrong: [18, 20, 22, 24, 25, 26, 27, 28, 42] },
+    { question: '7 x 4', correct: 28, wrong: [24, 26, 30, 32, 34, 35, 36, 38, 56] },
+    { question: '7 x 5', correct: 35, wrong: [28, 30, 36, 38, 40, 42, 45, 49, 70] },
+    { question: '7 x 6', correct: 42, wrong: [36, 38, 44, 46, 48, 49, 50, 54, 84] },
+    { question: '7 x 7', correct: 49, wrong: [42, 45, 48, 50, 52, 54, 56, 58, 98] },
+    { question: '7 x 8', correct: 56, wrong: [48, 50, 54, 56, 58, 60, 64, 66, 112] },
+    { question: '7 x 9', correct: 63, wrong: [54, 56, 58, 60, 64, 65, 66, 72, 126] },
+    { question: '7 x 10', correct: 70, wrong: [60, 63, 64, 66, 68, 72, 75, 80, 140] }
+  ],
+  8: [
+    { question: '8 x 1', correct: 8, wrong: [4, 6, 7, 9, 10, 12, 14, 16, 24] },
+    { question: '8 x 2', correct: 16, wrong: [10, 14, 15, 18, 20, 22, 24, 26, 32] },
+    { question: '8 x 3', correct: 24, wrong: [16, 18, 20, 22, 25, 26, 28, 30, 48] },
+    { question: '8 x 4', correct: 32, wrong: [24, 26, 28, 30, 34, 36, 38, 40, 64] },
+    { question: '8 x 5', correct: 40, wrong: [30, 32, 36, 38, 42, 44, 45, 50, 80] },
+    { question: '8 x 6', correct: 48, wrong: [38, 40, 44, 46, 48, 50, 54, 56, 96] },
+    { question: '8 x 7', correct: 56, wrong: [48, 50, 54, 56, 58, 60, 64, 66, 112] },
+    { question: '8 x 8', correct: 64, wrong: [56, 58, 60, 62, 64, 66, 68, 70, 128] },
+    { question: '8 x 9', correct: 72, wrong: [63, 64, 66, 68, 70, 74, 75, 80, 144] },
+    { question: '8 x 10', correct: 80, wrong: [70, 72, 74, 76, 78, 80, 84, 90, 160] }
+  ],
+  9: [
+    { question: '9 x 1', correct: 9, wrong: [4, 5, 7, 8, 10, 11, 12, 14, 18] },
+    { question: '9 x 2', correct: 18, wrong: [16, 17, 20, 22, 24, 26, 28, 30, 36] },
+    { question: '9 x 3', correct: 27, wrong: [24, 25, 28, 29, 30, 32, 35, 36, 54] },
+    { question: '9 x 4', correct: 36, wrong: [32, 34, 38, 40, 42, 44, 45, 48, 72] },
+    { question: '9 x 5', correct: 45, wrong: [40, 42, 45, 48, 49, 50, 54, 60, 90] },
+    { question: '9 x 6', correct: 54, wrong: [48, 50, 52, 56, 58, 60, 62, 63, 108] },
+    { question: '9 x 7', correct: 63, wrong: [54, 56, 58, 60, 64, 65, 66, 72, 126] },
+    { question: '9 x 8', correct: 72, wrong: [63, 64, 66, 68, 70, 74, 75, 80, 144] },
+    { question: '9 x 9', correct: 81, wrong: [72, 74, 75, 77, 80, 82, 84, 90, 162] },
+    { question: '9 x 10', correct: 90, wrong: [80, 81, 82, 84, 85, 88, 90, 100, 180] }
+  ],
+  10: [
+    { question: '10 x 1', correct: 10, wrong: [4, 5, 6, 7, 8, 9, 15, 20, 25] },
+    { question: '10 x 2', correct: 20, wrong: [15, 18, 22, 24, 25, 26, 28, 30, 40] },
+    { question: '10 x 3', correct: 30, wrong: [25, 28, 32, 34, 36, 38, 40, 50, 60] },
+    { question: '10 x 4', correct: 40, wrong: [35, 38, 42, 44, 46, 48, 50, 60, 80] },
+    { question: '10 x 5', correct: 50, wrong: [40, 42, 45, 48, 49, 50, 55, 60, 100] },
+    { question: '10 x 6', correct: 60, wrong: [50, 54, 56, 58, 60, 62, 64, 70, 120] },
+    { question: '10 x 7', correct: 70, wrong: [60, 63, 64, 66, 68, 70, 72, 75, 140] },
+    { question: '10 x 8', correct: 80, wrong: [70, 72, 74, 76, 78, 80, 84, 90, 160] },
+    { question: '10 x 9', correct: 90, wrong: [80, 82, 84, 86, 88, 90, 92, 100, 180] },
+    { question: '10 x 10', correct: 100, wrong: [90, 92, 94, 96, 98, 100, 102, 110, 200] }
+  ]
+}
