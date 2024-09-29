@@ -1,0 +1,32 @@
+#selectTablesForm {
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.5em;
+    flex-wrap: wrap;
+  }
+
+  label {
+    background-color: red;
+    font-weight: bolder;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  input {
+    display: none;
+    &:checked + label {
+      background-color: green;
+    }
+  }
+
+  button {
+    margin-top: 20px;
+  }
+}

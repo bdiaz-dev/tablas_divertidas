@@ -1,15 +1,15 @@
 export const multiplicationTables = {
   1: [
-    { question: '1 x 1', correct: 1, wrong: [0, 2, 3, 4, 5, 6, 7, 8, 9] },
-    { question: '1 x 2', correct: 2, wrong: [1, 3, 4, 5, 6, 7, 8, 9, 10] },
-    { question: '1 x 3', correct: 3, wrong: [1, 2, 4, 5, 6, 7, 8, 9, 12] },
-    { question: '1 x 4', correct: 4, wrong: [2, 3, 5, 6, 7, 8, 9, 10, 12] },
-    { question: '1 x 5', correct: 5, wrong: [3, 4, 6, 7, 8, 9, 10, 12, 15] },
-    { question: '1 x 6', correct: 6, wrong: [4, 5, 7, 8, 9, 10, 11, 12, 14] },
-    { question: '1 x 7', correct: 7, wrong: [5, 6, 8, 9, 10, 11, 12, 13, 14] },
-    { question: '1 x 8', correct: 8, wrong: [6, 7, 9, 10, 11, 12, 13, 14, 16] },
-    { question: '1 x 9', correct: 9, wrong: [7, 8, 10, 11, 12, 13, 14, 15, 18] },
-    { question: '1 x 10', correct: 10, wrong: [8, 9, 11, 12, 13, 14, 15, 16, 20] }
+    { question: '1 x 1', correct: 1, wrong: [0, 2, 3, 4, 5, 6] },
+    { question: '1 x 2', correct: 2, wrong: [1, 3, 4, 5, 6, 7] },
+    { question: '1 x 3', correct: 3, wrong: [1, 2, 4, 5, 6, 7] },
+    { question: '1 x 4', correct: 4, wrong: [2, 3, 5, 6, 7, 8] },
+    { question: '1 x 5', correct: 5, wrong: [3, 4, 6, 7, 8, 9] },
+    { question: '1 x 6', correct: 6, wrong: [4, 5, 7, 8, 9, 10] },
+    { question: '1 x 7', correct: 7, wrong: [5, 6, 8, 9, 10, 11] },
+    { question: '1 x 8', correct: 8, wrong: [6, 7, 9, 10, 11, 12] },
+    { question: '1 x 9', correct: 9, wrong: [7, 8, 10, 11, 12, 13] },
+    { question: '1 x 10', correct: 10, wrong: [8, 9, 11, 12, 13, 14] }
   ],
   2: [
     { question: '2 x 1', correct: 2, wrong: [1, 3, 4, 5, 6, 7, 8, 9, 10] },

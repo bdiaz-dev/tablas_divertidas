@@ -1,0 +1,135 @@
+#gameScreen {
+  .gameData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+    div:not(#chrono) {
+      background-color: blue;
+      padding: 5px;
+      border-radius: 10px;
+      font-weight: bolder;
+      font-size: 1.2em;
+    }
+  }
+  #chrono {
+    background-color: blue;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 1.2em;
+  }
+  button {
+    margin-top: 20px;
+  }
+
+  .questionsContainer {
+    margin: auto;
+    position: relative;
+    width: 85dvw;
+    max-width: 500px;
+    height: 60dvh;
+  }
+
+  &:nth-child(2) {
+    transform: translateY(-100%);
+  }
+
+  // position: relative;
+  .questionCard {
+    background-color: lightblue;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    h3 {
+      margin: 0;
+      padding: 10px 30px;
+      background-color: blue;
+      border-radius: 20px;
+      font-size: 2.5em;
+    }
+
+    h2 {
+      color: blue;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      // margin: 0 30px;
+
+      li {
+        position: relative;
+        padding: 10px;
+        min-width: 24px;
+        background-color: white;
+        border-radius: 10px;
+        color: black;
+        cursor: pointer;
+
+
+        p {
+          font-weight: bolder;
+          margin: 0;
+        }
+
+        div {
+          display: none;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+
+          span {
+            width: 100%;
+            font-size: 2em;
+            font-weight: bolder;
+            color: white;
+          }
+        }
+
+        &[wrong=true] {
+          background-color: red;
+
+          p {
+            opacity: 0;
+          }
+
+          .wrongMark {
+            display: flex;
+            position: absolute;
+          }
+        }
+
+        &[correct=true] {
+          background-color: green;
+
+          p {
+            opacity: 0;
+          }
+
+          .correctMark {
+            display: flex;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}

@@ -5,23 +5,29 @@ import { useSelectedTables } from './context/selectedTablesContext'
 import SelectTablesForm from './components/SelectTablesForm'
 import Table from './components/Table'
 import GameScreen from './components/GameScreen'
+import { GameDataContext } from './context/gameDataContext'
 
 function App () {
   const { selectedTables } = useSelectedTables()
 
   return (
     <>
-      <div>
-        <h1>Tablas divertidas</h1>
-        <h2>Con cuales jugamos hoy?</h2>
-        {selectedTables.length < 1 && <SelectTablesForm />}
-
-        <div>
-          {selectedTables.length > 0 && <h3>Tablas seleccionadas: {selectedTables.join(', ')}</h3>}
-        </div>
+      <div id='main'>
+        {selectedTables.length < 1 && (
+          <>
+            <h1>Tablas divertidas</h1>
+            <h2>Con cuales jugamos hoy?</h2>
+            <SelectTablesForm />
+            <div>
+              {selectedTables.length > 0 && <h3>Tablas seleccionadas: {selectedTables.join(', ')}</h3>}
+            </div>
+          </>
+        )}
 
         {selectedTables.length > 0 && <div>
-          <GameScreen />
+          <GameDataContext>
+            <GameScreen />
+          </GameDataContext>
           {/* <ul>
 
             {selectedTables.map((el) => (
