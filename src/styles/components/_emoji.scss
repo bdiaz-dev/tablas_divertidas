@@ -41,5 +41,69 @@
     position: absolute;
     left: 80px;
     bottom: 80px;
+    
+    animation-name: lateralMove;
+    // animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    
+    &[data-animation='2'] {
+      animation-name: rightAnimation;
+      animation-duration: 1.5s;
+      // animation-delay: 0s;
+      animation-direction: normal;
+    } 
+    &[data-animation='1'] {
+      animation-name: wrongAnimation;
+      animation-duration: .6s;
+      // animation-delay: 0s;
+      animation-direction: normal;
+    } 
+  }
+}
+
+@keyframes lateralMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(20px);
+  }
+
+};
+
+@keyframes rightAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(30px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes wrongAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  35% {
+    transform: rotate(15deg);
+  }
+  // 40% {
+  //   transform: rotate(0);
+  // }
+  65% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }

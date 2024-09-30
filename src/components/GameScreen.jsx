@@ -8,6 +8,7 @@ import { useGameData } from '../context/gameDataContext'
 import WrongAnswers from './gameScreen/gameData/WrongAnswers'
 import { useGameFunctions } from '../hooks/useGameFunctions'
 import LeftAnswers from './gameScreen/gameData/LeftAnswers'
+import FinalModal from './gameScreen/FinalModal'
 
 export default function GameScreen () {
   const { selectedTables } = useSelectedTables()
@@ -54,7 +55,7 @@ export default function GameScreen () {
       >
         {'Dame otra!'}
       </button>
-
+      <FinalModal />
     </div>
   )
 }

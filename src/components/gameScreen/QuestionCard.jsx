@@ -7,7 +7,7 @@ import Answer from './questionCardComponents/Answer'
 
 export default function QuestionCard ({ item, index }) {
   const { trySolution } = useGameFunctions()
-  const { displayedQuestion } = useGameData()
+  const { displayedQuestion, correctAnswers } = useGameData()
   const isSelected = displayedQuestion === index
   const [shuffledAnswers, setShuffledAnswers] = useState([])
 
@@ -26,13 +26,15 @@ export default function QuestionCard ({ item, index }) {
             exit={{ translateX: '-100dvw' }}
             transition={{ duration: 0.5 }}
           >
-            <h3>{item.question}</h3>
+            <h3>
+              {`${item.question} = ${correctAnswers.includes(index) ? item.correct : ''}`}
+            </h3>
             <h2>{'¿Cuanto es?'}</h2>
             <div>
               <ul>
                 {shuffledAnswers.map((s, index) => (
                   <Answer
-                  key={`${item.question}-${index}`}
+                    key={`${item.question}-${index}`}
                     s={s}
                     handleClick={(e) => trySolution(e, { s, correct: item.correct })}
                   />

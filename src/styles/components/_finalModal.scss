@@ -1,0 +1,21 @@
+#finalModalContainer {
+  transform-origin: 50%;
+  position: absolute;
+  width: 100dvw;
+  height: 100dvh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(245, 222, 179, 0.219);
+  backdrop-filter: blur(10px);
+  
+  .finalModal {
+    width: 70%;
+    height: 70%;
+    background-color: blue;
+    border-radius: 20px;
+    color: white;
+  }
+}

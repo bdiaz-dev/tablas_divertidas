@@ -1,14 +1,13 @@
-import React, { createContext, useContext, useRef, useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 
-// Crear el contexto
 const GameDataContext = createContext()
 
-// Proveedor del contexto
 export const GameDataProvider = ({ children }) => {
   const [wrongAnswers, setWrongAnswers] = useState(0)
   const [gameQuestions, setGameQuestions] = useState([])
   const [displayedQuestion, setDisplayedQuestion] = useState(0)
-  const correctAnswers = useRef([])
+  const [correctAnswers, setCorrectAnswers] = useState([])
+  const [isFinal, setIsFinal] = useState(false)
 
   const incrementWrongAnswers = () => {
     setWrongAnswers((prev) => prev + 1)
@@ -22,14 +21,16 @@ export const GameDataProvider = ({ children }) => {
       setGameQuestions,
       displayedQuestion,
       setDisplayedQuestion,
-      correctAnswers
+      correctAnswers,
+      setCorrectAnswers,
+      isFinal,
+      setIsFinal
     }}>
       {children}
     </GameDataContext.Provider>
   )
 }
 
-// Hook personalizado para usar el contexto de wrongAnswers
 export const useGameData = () => {
   return useContext(GameDataContext)
 }

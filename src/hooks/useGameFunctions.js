@@ -6,12 +6,14 @@ export const useGameFunctions = () => {
     displayedQuestion,
     setDisplayedQuestion,
     incrementWrongAnswers,
-    correctAnswers
+    correctAnswers,
+    setCorrectAnswers,
+    setIsFinal
   } = useGameData()
 
   const handleOther = () => {
     const randomIndex = Math.floor(Math.random() * gameQuestions.length)
-    if (randomIndex !== displayedQuestion && !correctAnswers.current.includes(randomIndex)) {
+    if (randomIndex !== displayedQuestion && !correctAnswers.includes(randomIndex)) {
       setDisplayedQuestion(randomIndex)
     } else {
       handleOther(correctAnswers)
@@ -22,11 +24,11 @@ export const useGameFunctions = () => {
     console.log(s)
     if (s === correct) {
       e.currentTarget.setAttribute('correct', true)
-      const newCorrectArray = [...correctAnswers.current, displayedQuestion]
-      correctAnswers.current = newCorrectArray
+      const newCorrectArray = [...correctAnswers, displayedQuestion]
+      setCorrectAnswers(newCorrectArray)
       console.log(newCorrectArray)
       if (gameQuestions.length === newCorrectArray.length) {
-        console.log('winner!!!')
+        setIsFinal(true)
       } else {
         setTimeout(() => handleOther(correctAnswers), 1000)
       }

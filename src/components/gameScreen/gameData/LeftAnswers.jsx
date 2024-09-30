@@ -4,7 +4,7 @@ export default function LeftAnswers () {
   const { gameQuestions, correctAnswers } = useGameData()
   return (
     <div>
-    {`Te quedan ${gameQuestions.length - correctAnswers.current.length}`}
+    {`Te quedan ${gameQuestions.length - correctAnswers.length}`}
   </div>
   )
 }

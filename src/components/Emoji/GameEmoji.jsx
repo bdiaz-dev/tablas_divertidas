@@ -10,24 +10,33 @@ export default function GameEmoji () {
     right: ['😎', '🤩', '😁', '😃']
   }
   const [actualFace, setActualFace] = useState(faces.thinking)
+  const [animation, setAnimation] = useState('0')
 
   useEffect(() => {
     if (!wrongAnswers) return
     const newWrongFace = shuffleArray(faces.wrong)
     setActualFace(newWrongFace[0])
-    setTimeout(() => { setActualFace(faces.thinking) }, 1500)
+    setAnimation('1')
+    setTimeout(() => {
+      setActualFace(faces.thinking)
+      setAnimation(0)
+    }, 1500)
   }, [wrongAnswers])
 
   useEffect(() => {
-    if (!correctAnswers.current) return
+    if (!correctAnswers) return
     const newRightFace = shuffleArray(faces.right)
     setActualFace(newRightFace[0])
-    setTimeout(() => { setActualFace(faces.thinking) }, 1500)
-  }, [correctAnswers.current])
+    setAnimation('2')
+    setTimeout(() => {
+      setActualFace(faces.thinking)
+      setAnimation(0)
+    }, 1500)
+  }, [correctAnswers])
 
   return (
     <div id='gameEmoji'>
-      <span className="emoji">
+      <span className="emoji" data-animation={animation}>
         {actualFace}
       </span>
     </div>
