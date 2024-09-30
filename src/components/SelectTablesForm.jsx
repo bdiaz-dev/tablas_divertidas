@@ -1,9 +1,10 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import { useSelectedTables } from '../context/selectedTablesContext'
+import { motion } from 'framer-motion'
 
 export default function SelectTablesForm () {
-  const { selectedTables, setSelectedTables } = useSelectedTables()
-  const [checkedTables, setCheckedTables] = useState([])
+  const { setSelectedTables } = useSelectedTables()
+  // const [checkedTables, setCheckedTables] = useState([])
   const selectTable = (event) => {
     event.preventDefault()
 
@@ -19,34 +20,34 @@ export default function SelectTablesForm () {
     <form id='selectTablesForm' action="" onSubmit={selectTable}>
       <div>
         <input type="checkbox" name="1" id="1" />
-        <label htmlFor="1">1</label>
+        <motion.label whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} htmlFor="1">1</motion.label>
 
         <input type="checkbox" name="2" id="2" />
-        <label htmlFor="2">2</label>
+        <motion.label whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} htmlFor="2">2</motion.label>
 
         <input type="checkbox" name="3" id="3" />
-        <label htmlFor="3">3</label>
+        <motion.label whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} htmlFor="3">3</motion.label>
 
         <input type="checkbox" name="4" id="4" />
-        <label htmlFor="4">4</label>
+        <motion.label whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} htmlFor="4">4</motion.label>
 
         <input type="checkbox" name="5" id="5" />
-        <label htmlFor="5">5</label>
+        <motion.label whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} htmlFor="5">5</motion.label>
 
         <input type="checkbox" name="6" id="6" />
-        <label htmlFor="6">6</label>
+        <motion.label whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} htmlFor="6">6</motion.label>
 
         <input type="checkbox" name="7" id="7" />
-        <label htmlFor="7">7</label>
+        <motion.label whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} htmlFor="7">7</motion.label>
 
         <input type="checkbox" name="8" id="8" />
-        <label htmlFor="8">8</label>
+        <motion.label whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} htmlFor="8">8</motion.label>
 
         <input type="checkbox" name="9" id="9" />
-        <label htmlFor="9">9</label>
+        <motion.label whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} htmlFor="9">9</motion.label>
 
         <input type="checkbox" name="10" id="10" />
-        <label htmlFor="10">10</label>
+        <motion.label whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} htmlFor="10">10</motion.label>
       </div>
 
       <button type='submit'>Vamos!</button>

@@ -1,5 +1,5 @@
-#emoji {
-  span {
+#startEmoji {
+  .emoji {
     font-size: 5em;
     position: absolute;
     left: 80px;
@@ -9,6 +9,19 @@
     animation-duration: 1s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+  }
+
+  .textBox {
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 2em;
+    position: absolute;
+    bottom: 80px;
+    left: 200px;
+    span {
+      padding: 30px;
+    }
   }
 }
 
@@ -20,4 +33,13 @@
     transform: translateY(20px);
   }
 
+}
+
+#gameEmoji {
+  .emoji {
+    font-size: 5em;
+    position: absolute;
+    left: 80px;
+    bottom: 80px;
+  }
 }
