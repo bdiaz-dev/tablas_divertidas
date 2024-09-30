@@ -1,17 +1,28 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import shuffleArray from '../../logic/shuffle'
+import { useGameFunctions } from '../../hooks/useGameFunctions'
+import { useGameData } from '../../context/gameDataContext'
+import { useEffect, useState } from 'react'
+import Answer from './questionCardComponents/Answer'
 
-export default function QuestionCard ({ item, isSelected, trySolution }) {
+export default function QuestionCard ({ item, index }) {
+  const { trySolution } = useGameFunctions()
+  const { displayedQuestion } = useGameData()
+  const isSelected = displayedQuestion === index
+  const [shuffledAnswers, setShuffledAnswers] = useState([])
+
+  useEffect(() => {
+    setShuffledAnswers(shuffleArray([item.correct, ...item.wrong]))
+  }, [item])
+
   return (
     <AnimatePresence>
       {isSelected && (
         <>
           <motion.div
             className='questionCard'
-            // initial={{ translateX: (direction > 0) ? '100dvw' : '-100dvw' }}
             initial={{ translateX: '100dvw' }}
             animate={{ translateX: '0' }}
-            // exit={{ translateX: (direction > 0) ? '-100dvw' : '100dvw' }}
             exit={{ translateX: '-100dvw' }}
             transition={{ duration: 0.5 }}
           >
@@ -19,19 +30,12 @@ export default function QuestionCard ({ item, isSelected, trySolution }) {
             <h2>{'¿Cuanto es?'}</h2>
             <div>
               <ul>
-                {shuffleArray([item.correct, ...item.wrong]).map((s, index) => (
-                  <li
-                    key={`${item.question}-${index}`}
-                    onClick={(e) => trySolution(e, { s, correct: item.correct })}
-                  >
-                    <p>{s}</p>
-                    <div className='wrongMark'>
-                      <span>X</span>
-                    </div>
-                    <div className='correctMark'>
-                      <span>✔</span>
-                    </div>
-                  </li>
+                {shuffledAnswers.map((s, index) => (
+                  <Answer
+                  key={`${item.question}-${index}`}
+                    s={s}
+                    handleClick={(e) => trySolution(e, { s, correct: item.correct })}
+                  />
                 ))}
               </ul>
             </div>

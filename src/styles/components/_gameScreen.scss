@@ -73,63 +73,63 @@
       flex-wrap: wrap;
       // margin: 0 30px;
 
-      li {
-        position: relative;
-        padding: 10px;
-        min-width: 24px;
-        background-color: white;
-        border-radius: 10px;
-        color: black;
-        cursor: pointer;
+      // li {
+      //   position: relative;
+      //   padding: 10px;
+      //   min-width: 24px;
+      //   background-color: white;
+      //   border-radius: 10px;
+      //   color: black;
+      //   cursor: pointer;
 
 
-        p {
-          font-weight: bolder;
-          margin: 0;
-        }
+      //   p {
+      //     font-weight: bolder;
+      //     margin: 0;
+      //   }
 
-        div {
-          display: none;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          align-items: center;
+      //   div {
+      //     display: none;
+      //     top: 0;
+      //     left: 0;
+      //     width: 100%;
+      //     height: 100%;
+      //     align-items: center;
 
-          span {
-            width: 100%;
-            font-size: 2em;
-            font-weight: bolder;
-            color: white;
-          }
-        }
+      //     span {
+      //       width: 100%;
+      //       font-size: 2em;
+      //       font-weight: bolder;
+      //       color: white;
+      //     }
+      //   }
 
-        &[wrong=true] {
-          background-color: red;
+      //   &[wrong=true] {
+      //     background-color: red;
 
-          p {
-            opacity: 0;
-          }
+      //     p {
+      //       opacity: 0;
+      //     }
 
-          .wrongMark {
-            display: flex;
-            position: absolute;
-          }
-        }
+      //     .wrongMark {
+      //       display: flex;
+      //       position: absolute;
+      //     }
+      //   }
 
-        &[correct=true] {
-          background-color: green;
+      //   &[correct=true] {
+      //     background-color: green;
 
-          p {
-            opacity: 0;
-          }
+      //     p {
+      //       opacity: 0;
+      //     }
 
-          .correctMark {
-            display: flex;
-            position: absolute;
-          }
-        }
-      }
+      //     .correctMark {
+      //       display: flex;
+      //       position: absolute;
+      //     }
+      //   }
+      // }
     }
   }
 }

@@ -1,0 +1,92 @@
+.answer {
+  position: relative;
+  padding: 10px;
+  min-width: 24px;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+
+
+  p {
+    font-weight: bolder;
+    margin: 0;
+  }
+
+  div {
+    display: none;
+    top: -3px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    span {
+      width: 100%;
+      height: 100%;
+      font-size: 2em;
+      font-weight: bolder;
+      color: white;
+    }
+  }
+
+  &[wrong=true] {
+    background-color: red;
+
+    p {
+      opacity: 0;
+    }
+
+    .wrongMark {
+      display: flex;
+      position: absolute;
+      animation-name: wrong-animation;
+      animation-duration: .5s;
+    }
+  }
+
+  &[correct=true] {
+    background-color: green;
+
+    p {
+      opacity: 0;
+    }
+
+    .correctMark {
+      display: flex;
+      position: absolute;
+      transform-origin: 50%;
+      animation-name: correct-animation;
+      animation-duration: .3s;
+    }
+  }
+}
+
+@keyframes correct-animation {
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes wrong-animation {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(-20deg);
+  }
+  60% {
+    transform: rotate(20deg);
+  }
+  80% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

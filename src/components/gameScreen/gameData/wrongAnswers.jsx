@@ -1,10 +1,10 @@
-import { useWrongAnswers } from '../../../context/gameDataContext'
+import { useGameData } from '../../../context/gameDataContext'
 
 export default function WrongAnswers () {
-  const { wrongAnswers } = useWrongAnswers()
+  const { wrongAnswers } = useGameData()
   return (
     <div>
-    {`Errores: ${wrongAnswers}`}
-  </div>
+      {`Errores: ${wrongAnswers}`}
+    </div>
   )
 }
