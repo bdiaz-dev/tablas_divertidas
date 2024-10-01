@@ -1,4 +1,3 @@
-import './App.css'
 import { useSelectedTables } from './context/selectedTablesContext'
 import SelectTablesForm from './components/SelectTablesForm'
 import GameScreen from './components/GameScreen'
