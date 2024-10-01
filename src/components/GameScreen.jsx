@@ -5,12 +5,12 @@ import shuffleArray from '../logic/shuffle'
 import QuestionCard from './gameScreen/QuestionCard'
 import Chrono from './gameScreen/chrono/Chrono'
 import { useGameData } from '../context/gameDataContext'
-import WrongAnswers from './gameScreen/gameData/WrongAnswers'
 import { useGameFunctions } from '../hooks/useGameFunctions'
 import LeftAnswers from './gameScreen/gameData/LeftAnswers'
 import FinalModal from './gameScreen/FinalModal'
 import CloseButton from './gameScreen/closeButton/CloseButton'
 import CloseModal from './gameScreen/closeButton/CloseModal'
+import WrongAnswers from './gameScreen/gameData/WrongAnswers'
 
 export default function GameScreen () {
   const { selectedTables } = useSelectedTables()
