@@ -10,7 +10,7 @@ import LeftAnswers from './gameScreen/gameData/LeftAnswers'
 import FinalModal from './gameScreen/FinalModal'
 import CloseButton from './gameScreen/closeButton/CloseButton'
 import CloseModal from './gameScreen/closeButton/CloseModal'
-import WrongAnswers from './gameScreen/gameData/WrongAnswers'
+import WrongAnswers from './gameScreen/gameData/FailAnswers'
 
 export default function GameScreen () {
   const { selectedTables } = useSelectedTables()
