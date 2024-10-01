@@ -9,6 +9,8 @@ import WrongAnswers from './gameScreen/gameData/WrongAnswers'
 import { useGameFunctions } from '../hooks/useGameFunctions'
 import LeftAnswers from './gameScreen/gameData/LeftAnswers'
 import FinalModal from './gameScreen/FinalModal'
+import CloseButton from './gameScreen/closeButton/CloseButton'
+import CloseModal from './gameScreen/closeButton/CloseModal'
 
 export default function GameScreen () {
   const { selectedTables } = useSelectedTables()
@@ -53,9 +55,11 @@ export default function GameScreen () {
       <button
         onClick={handleOther}
       >
-        {'Dame otra!'}
+        {'Dame otra! 😬'}
       </button>
       <FinalModal />
+      <CloseButton />
+      <CloseModal />
     </div>
   )
 }

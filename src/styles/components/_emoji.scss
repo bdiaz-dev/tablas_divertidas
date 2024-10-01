@@ -22,6 +22,18 @@
     span {
       padding: 30px;
     }
+    &:before{
+        border: 15px solid white;
+        content: '';
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        position: absolute;
+        bottom: 9px;
+        left: -26px;
+        transform: rotate(90deg);
+        // left: calc(50% - 25px);
+      }
   }
 }
 
