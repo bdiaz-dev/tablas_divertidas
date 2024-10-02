@@ -9,6 +9,7 @@ export const GameDataProvider = ({ children }) => {
   const [correctAnswers, setCorrectAnswers] = useState([])
   const [isFinal, setIsFinal] = useState(false)
   const [isCloseModal, setIsCloseModal] = useState(false)
+  const [time, setTime] = useState('')
 
   const incrementWrongAnswers = () => {
     setWrongAnswers((prev) => prev + 1)
@@ -27,7 +28,9 @@ export const GameDataProvider = ({ children }) => {
       isFinal,
       setIsFinal,
       isCloseModal,
-      setIsCloseModal
+      setIsCloseModal,
+      time,
+      setTime
     }}>
       {children}
     </GameDataContext.Provider>

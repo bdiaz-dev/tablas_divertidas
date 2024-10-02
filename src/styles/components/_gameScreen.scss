@@ -133,3 +133,23 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  #gameScreen {
+    .gameData {
+      display: flex;
+      flex-wrap: wrap;
+      // flex-direction: column;
+      #chrono {
+        width: 65%;
+      }
+    }
+    .questionsContainer {
+      max-height: 50dvh;
+      ul {
+        max-width: 90%;
+        margin: auto;
+      }
+    }
+  }
+}

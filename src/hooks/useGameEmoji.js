@@ -1,15 +1,10 @@
 import { useEffect, useState } from 'react'
 import shuffleArray from '../logic/shuffle'
 import { useGameData } from '../context/gameDataContext'
+import { faces } from '../constants/gameEmojiFaces.'
 
 export const useGameEmoji = () => {
   const { wrongAnswers, correctAnswers, isFinal } = useGameData()
-  const faces = {
-    thinking: '🤔',
-    wrong: ['😓', '😖', '😯', '🤯'],
-    right: ['😎', '🤩', '😁', '😃'],
-    final: '✨🥳🎉'
-  }
   const [actualFace, setActualFace] = useState(faces.thinking)
   const [animation, setAnimation] = useState('0')
 

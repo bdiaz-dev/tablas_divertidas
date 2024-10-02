@@ -21,12 +21,10 @@ export const useGameFunctions = () => {
   }
 
   const trySolution = (e, { s, correct }) => {
-    console.log(s)
     if (s === correct) {
       e.currentTarget.setAttribute('correct', true)
       const newCorrectArray = [...correctAnswers, displayedQuestion]
       setCorrectAnswers(newCorrectArray)
-      console.log(newCorrectArray)
       if (gameQuestions.length === newCorrectArray.length) {
         setIsFinal(true)
       } else {

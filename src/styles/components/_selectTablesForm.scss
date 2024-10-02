@@ -30,3 +30,12 @@
     margin-top: 20px;
   }
 }
+
+@media (max-width: 600px) {
+  #selectTablesForm {
+    div {
+      max-width: 95dvw;
+      margin: auto;
+    }
+}
+}

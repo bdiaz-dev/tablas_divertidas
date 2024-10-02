@@ -17,7 +17,7 @@
     border-radius: 20px;
     font-size: 2em;
     position: absolute;
-    bottom: 80px;
+    bottom: 100px;
     left: 200px;
     span {
       padding: 30px;
@@ -117,5 +117,24 @@
   }
   100% {
     transform: rotate(0);
+  }
+}
+
+
+@media (max-width: 600px) {
+  #startEmoji, #gameEmoji {
+    .emoji {
+      font-size: 4em;
+      left: 20px;
+      bottom: 20px;
+    }
+    .textBox {
+      left: 120px;
+      bottom: 20px;
+      right: 15px;
+      &::before {
+        bottom: 25px;
+      }
+    }
   }
 }
