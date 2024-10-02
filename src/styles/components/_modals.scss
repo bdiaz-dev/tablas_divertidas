@@ -14,7 +14,7 @@
   .finalModal, .closeModal {
     width: 70%;
     height: 70%;
-    background-color: blue;
+    background-color: $modal-background-color;
     border-radius: 20px;
     color: white;
     display: flex;
@@ -25,7 +25,7 @@
       margin: 10px 30px;
       font-weight: 800;
       &+ button {
-        background-color: red;
+        background-color: $button-no-color;
       }
     }
   }
@@ -33,10 +33,11 @@
 
 .finalWrong, .finalTime, .finalNoWrong {
   font-size: 1.2em;
-  color: lightgreen;
+  color: $no-wrong-color;
+  text-wrap: balance;
 }
 .finalWrong {
-    color: red;
+    color: $wrong-color;
 }
 h2:has(span.finalNoWrong) {
   animation-name: noErrors;

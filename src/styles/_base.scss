@@ -1,20 +1,14 @@
 :root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400; */
-  
   max-width: 1280px;
   margin: 0 auto;
-  /* padding: 2rem; */
   text-align: center;
 
   font-family: "Atma", system-ui;
   font-weight: 400;
   font-style: normal;
 
-  // color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: $text-color;
+  background-color: $background-color;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -50,8 +44,7 @@ button {
   font-size: 1.5em;
   font-weight: 500;
   font-family: inherit;
-  color: white;
-  background-color: darkgreen;
+  background-color: $button-color;
   cursor: pointer;
   transition: border-color 0.25s;
 }

@@ -7,14 +7,14 @@
     margin-bottom: 20px;
     font-size: 1.4em;
     div:not(#chrono) {
-      background-color: blue;
+      background-color: $game-data-background-color;
       padding: 5px 10px;
       border-radius: 10px;
       font-weight: bolder;
     }
   }
   #chrono {
-    background-color: blue;
+    background-color: $game-data-background-color;
     padding: 1px 12px;
     border-radius: 10px;
     font-weight: bolder;
@@ -38,7 +38,7 @@
 
   // position: relative;
   .questionCard {
-    background-color: lightblue;
+    background-color: $questionCard-background-color;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -53,13 +53,13 @@
     h3 {
       margin: 0;
       padding: 10px 30px;
-      background-color: blue;
+      background-color: $question-background-color;
       border-radius: 20px;
       font-size: 2.5em;
     }
 
     h2 {
-      color: blue;
+      color: $question-background-color;
     }
 
     ul {
@@ -71,65 +71,7 @@
       align-items: center;
       gap: 20px;
       flex-wrap: wrap;
-      // margin: 0 30px;
 
-      // li {
-      //   position: relative;
-      //   padding: 10px;
-      //   min-width: 24px;
-      //   background-color: white;
-      //   border-radius: 10px;
-      //   color: black;
-      //   cursor: pointer;
-
-
-      //   p {
-      //     font-weight: bolder;
-      //     margin: 0;
-      //   }
-
-      //   div {
-      //     display: none;
-      //     top: 0;
-      //     left: 0;
-      //     width: 100%;
-      //     height: 100%;
-      //     align-items: center;
-
-      //     span {
-      //       width: 100%;
-      //       font-size: 2em;
-      //       font-weight: bolder;
-      //       color: white;
-      //     }
-      //   }
-
-      //   &[wrong=true] {
-      //     background-color: red;
-
-      //     p {
-      //       opacity: 0;
-      //     }
-
-      //     .wrongMark {
-      //       display: flex;
-      //       position: absolute;
-      //     }
-      //   }
-
-      //   &[correct=true] {
-      //     background-color: green;
-
-      //     p {
-      //       opacity: 0;
-      //     }
-
-      //     .correctMark {
-      //       display: flex;
-      //       position: absolute;
-      //     }
-      //   }
-      // }
     }
   }
 }

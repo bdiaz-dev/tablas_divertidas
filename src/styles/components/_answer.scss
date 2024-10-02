@@ -2,9 +2,9 @@
   position: relative;
   padding: 10px;
   min-width: 24px;
-  background-color: white;
+  background-color: $answer-background-color;
   border-radius: 10px;
-  color: black;
+  color: $answer-text-color;
   cursor: pointer;
 
 
@@ -26,12 +26,12 @@
       height: 100%;
       font-size: 2em;
       font-weight: bolder;
-      color: white;
+      color: $text-color;
     }
   }
 
   &[wrong=true] {
-    background-color: red;
+    background-color: $wrong-color;
 
     p {
       opacity: 0;
@@ -46,7 +46,7 @@
   }
 
   &[correct=true] {
-    background-color: green;
+    background-color: $correct-color;
 
     p {
       opacity: 0;
