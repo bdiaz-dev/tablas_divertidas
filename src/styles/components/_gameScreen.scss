@@ -136,6 +136,8 @@
 
 @media (max-width: 600px) {
   #gameScreen {
+    // width: 95dvw;
+    margin: auto;
     .gameData {
       display: flex;
       flex-wrap: wrap;
