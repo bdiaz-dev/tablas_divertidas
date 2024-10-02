@@ -14,6 +14,7 @@ export default function StartEmoji () {
 
   useEffect(() => {
     if (selectedTables.length === 0 && isFailStart) {
+      document.getElementsByClassName('textBox')[0].style.display = 'block'
       setTodayText('Selecciona al menos una para empezar')
     }
   }, [selectedTables])
