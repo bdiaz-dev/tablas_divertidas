@@ -24,8 +24,9 @@
   overflow-x: hidden;
 }
 
-.main {
+#main {
   margin: auto;
+  max-width: 80dvw;
 }
 
 body {
@@ -53,4 +54,10 @@ button {
   background-color: darkgreen;
   cursor: pointer;
   transition: border-color 0.25s;
+}
+
+@media (max-width: 600px) {
+  #main {
+    min-height: 70dvh;
+  }
 }

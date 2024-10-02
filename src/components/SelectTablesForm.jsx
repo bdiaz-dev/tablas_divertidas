@@ -3,7 +3,7 @@ import { useSelectedTables } from '../context/selectedTablesContext'
 import { motion } from 'framer-motion'
 
 export default function SelectTablesForm () {
-  const { setSelectedTables } = useSelectedTables()
+  const { setSelectedTables, setIsFailStart } = useSelectedTables()
   // const [checkedTables, setCheckedTables] = useState([])
   const selectTable = (event) => {
     event.preventDefault()
@@ -13,6 +13,7 @@ export default function SelectTablesForm () {
       .filter(([, value]) => value === 'on')
       .map(([key]) => Number(key))
 
+    if (selected.length === 0) { setIsFailStart(true) }
     setSelectedTables(selected)
     console.log(selected)
   }

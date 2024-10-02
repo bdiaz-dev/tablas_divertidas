@@ -130,10 +130,15 @@
     }
     .textBox {
       left: 120px;
-      bottom: 20px;
+      bottom: 30px;
       right: 15px;
+      font-size: 1.5em;
+      span {
+        padding: 10px;
+      }
       &::before {
-        bottom: 25px;
+        bottom: 4px;
+        left: -22px;
       }
     }
   }

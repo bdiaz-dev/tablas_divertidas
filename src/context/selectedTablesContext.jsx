@@ -4,9 +4,15 @@ const SelectedTablesContext = createContext()
 
 export const SelectedTablesProvider = ({ children }) => {
   const [selectedTables, setSelectedTables] = useState([])
+  const [isFailStart, setIsFailStart] = useState(false)
 
   return (
-    <SelectedTablesContext.Provider value={{ selectedTables, setSelectedTables }}>
+    <SelectedTablesContext.Provider value={{
+      selectedTables,
+      setSelectedTables,
+      isFailStart,
+      setIsFailStart
+    }}>
       {children}
     </SelectedTablesContext.Provider>
   )
