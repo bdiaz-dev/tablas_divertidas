@@ -5,9 +5,10 @@ import { useSelectedTables } from '../../context/selectedTablesContext'
 
 export default function StartEmoji () {
   const [todayText, setTodayText] = useState('')
-  const { selectedTables, isFailStart } = useSelectedTables()
+  const { selectedTables, isFailStart, setIsFailStart } = useSelectedTables()
 
   useEffect(() => {
+    setIsFailStart(false)
     const newText = shuffleArray(text)
     setTodayText(newText[0])
   }, [])
