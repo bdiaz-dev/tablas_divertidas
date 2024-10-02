@@ -1,11 +1,13 @@
 import { useGameData } from '../../../context/gameDataContext'
-import { useSelectedTables } from '../../../context/selectedTablesContext'
+// import { useSelectedTables } from '../../../context/selectedTablesContext'
+import useReturn from '../../../hooks/useReturn'
 
 export default function CloseModal () {
   const { isCloseModal, setIsCloseModal } = useGameData()
-  const { setSelectedTables } = useSelectedTables()
+  // const { setSelectedTables } = useSelectedTables()
+  const { handleReturn } = useReturn()
   const handleClose = () => {
-    setSelectedTables([])
+    handleReturn()
     setIsCloseModal(false)
   }
   const handleCancel = () => {

@@ -5,15 +5,17 @@ import { useSelectedTables } from '../../context/selectedTablesContext'
 
 export default function StartEmoji () {
   const [todayText, setTodayText] = useState('')
-  const { selectedTables, isFailStart, setIsFailStart } = useSelectedTables()
+  const { selectedTables, isFailStart } = useSelectedTables()
+
+  // useEffect(() => {
+  //   setIsFailStart(false)
+  //   const newText = shuffleArray(text)
+  //   setTodayText(newText[0])
+  // }, [])
 
   useEffect(() => {
-    setIsFailStart(false)
     const newText = shuffleArray(text)
     setTodayText(newText[0])
-  }, [])
-
-  useEffect(() => {
     if (selectedTables.length === 0 && isFailStart) {
       document.getElementsByClassName('textBox')[0].style.display = 'block'
       setTodayText('Selecciona al menos una para empezar')
