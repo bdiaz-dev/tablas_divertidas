@@ -4,7 +4,7 @@ import { useSelectedTables } from '../../context/selectedTablesContext'
 import { useFinalText } from '../../hooks/useFinalText'
 
 export default function FinalModal () {
-  const { isFinal, time, wrongAnswers } = useGameData()
+  const { isFinal, time } = useGameData()
   const { setSelectedTables } = useSelectedTables()
   const { title, errorsText } = useFinalText()
   return (
@@ -19,18 +19,6 @@ export default function FinalModal () {
           <div className='finalModal'>
             <h1>{title}</h1>
             { errorsText }
-            {/* <h2>
-              {wrongAnswers === 0 &&
-                <span className='finalNoWrong'>No has cometido ningún error!</span>
-              }
-              {wrongAnswers > 0 &&
-                <>
-                  <span>Has cometido </span>
-                  <span className='finalWrong'>{wrongAnswers} </span>
-                  <span>Errores</span>
-                </>
-              }
-            </h2> */}
             <h2>
               <span>Has tardado </span>
               <span className='finalTime'>{time}</span>

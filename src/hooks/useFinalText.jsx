@@ -30,7 +30,7 @@ export const useFinalText = () => {
       <>
         <span>Has cometido </span>
         <span className='finalWrong'>{wrongAnswers} </span>
-        <span>Errores</span>
+        <span>{wrongAnswers > 1 ? 'Errores' : 'Error'}</span>
       </>
     }
     {/* {`Has cometido - ${wrongAnswers} - Errores`} */}

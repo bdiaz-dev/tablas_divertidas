@@ -17,7 +17,7 @@ function App () {
           (
             <>
               <h1>Tablas divertidas</h1>
-              <h2>Con cuales jugamos hoy?</h2>
+              <h2>¿Con cuales jugamos hoy?</h2>
               <SelectTablesForm />
               <div>
                 {selectedTables.length > 0 && <h3>Tablas seleccionadas: {selectedTables.join(', ')}</h3>}
