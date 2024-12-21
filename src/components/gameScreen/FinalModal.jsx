@@ -1,12 +1,12 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useGameData } from '../../context/gameDataContext'
-// import { useSelectedTables } from '../../context/selectedTablesContext'
+import { useSelectedTables } from '../../context/selectedTablesContext'
 import { useFinalText } from '../../hooks/useFinalText'
 import useReturn from '../../hooks/useReturn'
 
 export default function FinalModal () {
   const { isFinal, time } = useGameData()
-  // const { setSelectedTables, setIsFailStart } = useSelectedTables()
+  const { selectedTables } = useSelectedTables()
   const { title, errorsText } = useFinalText()
   const { handleReturn } = useReturn()
   return (
@@ -20,6 +20,7 @@ export default function FinalModal () {
         >
           <div className='finalModal'>
             <h1>{title}</h1>
+            <h2>{`Tablas: ${selectedTables}`}</h2>
             {errorsText}
             <h2>
               <span>Has tardado </span>

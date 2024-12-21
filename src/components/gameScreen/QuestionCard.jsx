@@ -4,13 +4,18 @@ import { useGameFunctions } from '../../hooks/useGameFunctions'
 import { useGameData } from '../../context/gameDataContext'
 import { useEffect, useState } from 'react'
 import Answer from './questionCardComponents/Answer'
+// import sortArray from '../../logic/sort'
 
 export default function QuestionCard ({ item, index }) {
   const { trySolution } = useGameFunctions()
   const { displayedQuestion, correctAnswers } = useGameData()
   const isSelected = displayedQuestion === index
   const [shuffledAnswers, setShuffledAnswers] = useState([])
+  // const [sortedAnswers, setSortedAnswers] = useState([])
 
+  // useEffect(() => {
+  //   setSortedAnswers(sortArray([item.correct, ...item.wrong]))
+  // }, [item])
   useEffect(() => {
     setShuffledAnswers(shuffleArray([item.correct, ...item.wrong]))
   }, [item])
